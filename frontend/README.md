@@ -2,24 +2,49 @@
 
 First step: npm install -g @angular/cli
 
-ng new <project_name> 
+#ng new <project_name> 
 
 For material design we can also use "ng add @angular/material"
 
-Now open the <project_name> folder in vs code(code .)
+Now open the < project_name> folder in vs code(code .)
 
 To run the project, simply use "ng serve -o"
 
-We can generate our own components from CLI using "ng genereate component components/<component_name>" or "ng g c components/<name>"
+We can generate our own components from CLI using 
+# ng genereate component components/<component_name>
+or
+#ng g c components/<name>
 (It will update app.module.ts and will create html,css,.ts and spec files)
+The component class name will be < component_name>Coponent in upper camel case
 
 Main/Index component is app.component.html
 
-We can embed one component into another using the selector defined in <name>.component.ts file
+We can embed one component into another using the selector defined in < component_name>.component.ts file
 
 Now we can provide the routes(with import package) in app.module.ts by importing our components and editing Routes = [];
 
-After this we can import import { MatToolbarModule } from '@angular/material' ; for <mat-toolbar> for material toolbar in app.component.ts.
+After this we can import import { MatToolbarModule } from '@angular/material' ; for < mat-toolbar> for material toolbar in app.component.ts. (Used in app.component.html)
+
+Basic structure of front end is ready now.
+
+Now after creating the backend http verbs, we will create a service class to connect to node server(README of backend)
+#ng generate service <service_name>
+or
+#ng g s <service_name>
+
+< service_name>.service.ts,< service_name>.sevice.spec.ts will be created.
+The service class name will be < service_name>Service in upper camel case by default.
+
+Now we need to add the service in app.module.ts and add that in the providers array.
+After this we will be able to use the issue service in all the components.
+now to send http request to the backend server we will use h"ttpClientModule", and to use this module in our service we need to import this in app.module.ts before import of the service and add also in imports array before routes.
+
+Now open the service file and import "httpClient" module and add that in constructor.
+NOTE:httpClientModule and httpClient are different.
+
+After configuring all the uri methods in service we need to inject it in our components.For this there are two steps:
+1. We need to import the service
+2. Add an instance for the same in the constructor.
 
 For deployment , run ng build (dist folder will be created)
 For production deployment, run ng build --prod
