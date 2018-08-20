@@ -46,6 +46,13 @@ After configuring all the uri methods in service we need to inject it in our com
 1. We need to import the service
 2. Add an instance for the same in the constructor.
 
+Now in ngOnInit method, we can call the service.
+
+Now we will create our material design, for that we will import all the necessary imports and further create issue.model.ts interface.
+After this open any component(list.component.ts) and import Router,MatTableDataSource and Issue (interface).Further start with the service calls and call them in ngOnInit method.
+
+According to UI we are adding actions intothe table rows like edit and delete a row for ever every row.For that we need event handler functions also.After all this we will edit the html file to display all the results in UI.
+
 For deployment , run ng build (dist folder will be created)
 For production deployment, run ng build --prod
 

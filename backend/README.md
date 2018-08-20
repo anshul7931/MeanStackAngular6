@@ -14,6 +14,7 @@ Now we need to install our middleware i.e. Express
 
 After this we will install mongoose library, which will help us to connect with mongodb
 #npm i mongoose --save
+In mongodb, the name of the collection will be : the name of schema suffixed by 's'
 
 Now we will install cors, in order to access the resource that are not present on same machine, like mongodb in different machine
 #npm i cors --save

@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());// Content-type :application/json
 
 mongoose.connect('mongodb://localhost:27017/issues');
-
+//mongoose.connect('mongodb://root:anshul7931@ds225902.mlab.com:25902/issues_db',{ useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open',()=> {  //once the connection is open then.
