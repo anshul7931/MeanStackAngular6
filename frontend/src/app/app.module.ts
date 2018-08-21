@@ -6,6 +6,9 @@ import { RouterModule, Routes } from '@angular/router';//For routes
 //For http client, to be used by service
 import { HttpClientModule } from '@angular/common/http';
 
+//For using Form Builders
+import { ReactiveFormsModule } from '@angular/forms';
+
 //Importing components
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,7 +29,7 @@ const routes: Routes = [
   { path:'create', component: CreateComponent },
   { path:'edit/:id', component: EditComponent },
   { path:'list', component: ListComponent },
-  { path:'', redirectTo: 'list', pathMatch: 'full' },
+  { path:'', redirectTo: 'list', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -41,6 +44,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
+    ReactiveFormsModule,
     MatToolbarModule,
     MatFormFieldModule, 
     MatInputModule, 

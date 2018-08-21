@@ -23,7 +23,7 @@ We can embed one component into another using the selector defined in < componen
 
 Now we can provide the routes(with import package) in app.module.ts by importing our components and editing Routes = [];
 
-After this we can import import { MatToolbarModule } from '@angular/material' ; for < mat-toolbar> for material toolbar in app.component.ts. (Used in app.component.html)
+After this we can import import { MatToolbarModule } from '@angular/material' ; for < mat-toolbar> for material toolbar in app.module.ts. (Used in app.module.html)
 
 Basic structure of front end is ready now.
 

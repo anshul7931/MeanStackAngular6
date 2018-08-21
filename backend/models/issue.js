@@ -6,7 +6,7 @@ let issue= new Schema({
     title:{
         type: String
     },
-    responsibile:{
+    responsible:{
         type: String
     },
     description:{
